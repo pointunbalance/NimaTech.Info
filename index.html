@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="موقع شخصي بسيط لاستعراض الأعمال والتواصل." />
+  <title>موقعي الشخصي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">موقعي الشخصي</div>
+    <nav class="nav">
+      <a href="#about">عنّي</a>
+      <a href="#projects">المشاريع</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <p class="badge">جاهز للتوظيف</p>
+        <h1>مرحبًا، أنا مطوّر ويب.</h1>
+        <p class="lead">
+          أبني مواقع سريعة وبسيطة وأحب مساعدة الأعمال الناشئة على إطلاق أفكارها على الويب.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#projects">استعرض الأعمال</a>
+          <a class="button button--ghost" href="#contact">تواصل معي</a>
+        </div>
+      </div>
+      <div class="hero__card" aria-hidden="true">
+        <p class="card__title">مهارات أساسية</p>
+        <ul>
+          <li>واجهات تفاعلية بـ HTML/CSS/JS</li>
+          <li>تصميم متجاوب لجميع الأجهزة</li>
+          <li>استضافة وتفعيل HTTPS عبر GitHub Pages</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel" id="about">
+      <div class="panel__header">
+        <p class="badge">عنّي</p>
+        <h2>مطور يركز على البساطة والأداء</h2>
+        <p class="muted">أحب بناء تجارب استخدام خفيفة وسريعة مع مراعاة إمكانية الوصول.</p>
+      </div>
+      <div class="grid grid--two">
+        <article class="card">
+          <h3>الخلفية</h3>
+          <p>أعمل كمطور واجهات أمامية. أستخدم ممارسات نظيفة في كتابة الكود وتوثيقه.</p>
+        </article>
+        <article class="card">
+          <h3>ما يمكنني تقديمه</h3>
+          <p>تصميم صفحات شخصية، مواقع شركات صغيرة، وصفحات هبوط بسيطة تدعم النمو السريع.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="projects">
+      <div class="panel__header">
+        <p class="badge">المشاريع</p>
+        <h2>نماذج من الأعمال</h2>
+        <p class="muted">يمكنك استبدال الأمثلة بروابط حقيقية لأعمالك.</p>
+      </div>
+      <div class="grid grid--three">
+        <article class="card card--project">
+          <div class="card__pill">موقع تعريفي</div>
+          <h3>شركة ناشئة</h3>
+          <p>تصميم متجاوب مع محتوى عربي، سرعة تحميل ممتازة، مع نموذج تواصل بسيط.</p>
+          <a class="card__link" href="#">مشاهدة المشروع</a>
+        </article>
+        <article class="card card--project">
+          <div class="card__pill">متجر مصغّر</div>
+          <h3>منتجات يدوية</h3>
+          <p>صفحات منتجات بسيطة مع عرض صور وأسعار، جاهز للربط مع بوابة دفع لاحقًا.</p>
+          <a class="card__link" href="#">مشاهدة المشروع</a>
+        </article>
+        <article class="card card--project">
+          <div class="card__pill">صفحة هبوط</div>
+          <h3>تطبيق موبايل</h3>
+          <p>رسائل واضحة، زر تحميل مباشر، وروابط المتاجر مع تتبع بسيط للزيارات.</p>
+          <a class="card__link" href="#">مشاهدة المشروع</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel panel--accent" id="contact">
+      <div class="panel__header">
+        <p class="badge">تواصل</p>
+        <h2>دعنا نعمل معًا</h2>
+        <p class="muted">أرسل رسالة قصيرة عن المشروع أو اطلب سيرة ذاتية كاملة.</p>
+      </div>
+      <div class="contact-card">
+        <div>
+          <p class="muted">البريد الإلكتروني</p>
+          <a class="contact-link" href="mailto:you@example.com">you@example.com</a>
+        </div>
+        <div>
+          <p class="muted">الشبكات</p>
+          <div class="pill-row">
+            <a class="pill" href="#">GitHub</a>
+            <a class="pill" href="#">LinkedIn</a>
+            <a class="pill" href="#">Behance</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 - هذا الموقع مبني لعرض الأعمال بسرعة على GitHub Pages.</p>
+  </footer>
+</body>
+</html>
