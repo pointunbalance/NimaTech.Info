@@ -100,6 +100,13 @@ section,
   font-weight: 800;
   letter-spacing: 0.6px;
   color: var(--brand);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-icon {
+  color: var(--brand);
 }
 
 .nav a {
@@ -209,10 +216,18 @@ section,
 .hero__card li {
   padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .hero__card li:last-child {
   border-bottom: none;
+}
+
+.hero__card li svg {
+  flex-shrink: 0;
+  color: var(--brand);
 }
 
 .panel {
@@ -291,6 +306,17 @@ section,
   margin-bottom: 8px;
 }
 
+.card__icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: rgba(109, 211, 194, 0.12);
+  border-radius: 12px;
+  color: var(--brand);
+  margin-bottom: 12px;
+}
+
 .card--project {
   display: flex;
   flex-direction: column;
@@ -312,10 +338,15 @@ section,
   color: var(--brand);
   text-decoration: none;
   font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
 }
 
 .card__link:hover {
   text-decoration: underline;
+  gap: 10px;
 }
 
 .card:hover {
@@ -512,10 +543,15 @@ section,
   border-radius: 999px;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.2s ease, transform 0.1s ease;
 }
 
 .pill:hover {
   border-color: var(--brand);
+  transform: translateY(-1px);
 }
 
 @keyframes float {
@@ -548,4 +584,85 @@ section,
     margin-left: 10px;
     font-size: 14px;
   }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(109, 211, 194, 0.15);
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23a7b5c7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 14px center;
+  padding-left: 36px;
+}
+
+.form-group select option {
+  background: var(--panel);
+  color: var(--text);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button--submit {
+  align-self: flex-start;
+  cursor: pointer;
+  font-family: inherit;
 }
