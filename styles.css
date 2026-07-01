@@ -96,6 +96,11 @@ section,
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 .brand {
   font-weight: 800;
   letter-spacing: 0.6px;
@@ -578,6 +583,10 @@ section,
     position: fixed;
     width: 100%;
     left: 0;
+  }
+
+  .nav {
+    gap: 10px;
   }
 
   .nav a {
