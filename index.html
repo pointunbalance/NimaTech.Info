@@ -15,12 +15,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="bg-orbs" aria-hidden="true">
-    <span class="orb orb--one"></span>
-    <span class="orb orb--two"></span>
-    <span class="orb orb--three"></span>
-  </div>
-
   <header class="top-bar">
     <div class="brand">
       <svg class="brand-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
@@ -39,8 +33,8 @@
   </header>
 
   <div class="announcement" role="status">
-    <div class="announcement__badge">تحديث جديد</div>
-    <p>أضفنا حزمة تفعيل سريعة خلال 48 ساعة مع ربط الفروع والفواتير الضريبية الإلكترونية.</p>
+    <div class="announcement__badge">جديد</div>
+    <p>تفعيل سريع خلال 48 ساعة مع ربط الفروع والفواتير الضريبية الإلكترونية.</p>
   </div>
 
   <main>
@@ -52,11 +46,11 @@
           نبني أنظمة عربية جاهزة للعمل بسرعة، تربط الفروع، تعالج الفواتير، وتبسّط متابعة المصروفات من دون تعقيد.
         </p>
         <div class="hero__actions">
-          <a class="button" href="#solutions">استكشف الحلول</a>
+          <a class="button button--brand" href="#solutions">استكشف الحلول</a>
           <a class="button button--ghost" href="#contact">اطلب عرض سعر</a>
         </div>
       </div>
-      <div class="hero__card" aria-hidden="true">
+      <div class="hero__card">
         <p class="card__title">جاهز للربط والتوسّع</p>
         <ul>
           <li>
@@ -75,7 +69,7 @@
       </div>
     </section>
 
-    <section class="panel panel--highlight">
+    <section class="panel panel--purple" id="about">
       <div class="panel__header">
         <p class="badge">لماذا NimaTech؟</p>
         <h2>نتعهد ببدء التشغيل خلال 48 ساعة</h2>
@@ -83,21 +77,21 @@
       </div>
       <div class="milestones">
         <div class="milestone">
-          <p class="milestone__step">01</p>
+          <p class="milestone__step milestone__step--purple">01</p>
           <div>
             <h3>تحليل سريع للنشاط</h3>
             <p>جلسة تعريفية عبر مكالمة مرئية لجمع متطلبات نقاط البيع والحسابات.</p>
           </div>
         </div>
         <div class="milestone">
-          <p class="milestone__step">02</p>
+          <p class="milestone__step milestone__step--brand">02</p>
           <div>
             <h3>إعداد وربط الأجهزة</h3>
             <p>تهيئة قواعد البيانات وربط الطابعات الحرارية والباركود مع اختبارات عملية.</p>
           </div>
         </div>
         <div class="milestone">
-          <p class="milestone__step">03</p>
+          <p class="milestone__step milestone__step--blue">03</p>
           <div>
             <h3>تدريب وتشغيل</h3>
             <p>تدريب مشرفي المبيعات والمحاسبة، مع كتيّبات استخدام مختصرة باللغة العربية.</p>
@@ -106,7 +100,7 @@
       </div>
     </section>
 
-    <section class="panel" id="about">
+    <section class="panel panel--blue">
       <div class="panel__header">
         <p class="badge">من نحن</p>
         <h2>شريك تقني للأنشطة التجارية الصغيرة</h2>
@@ -114,21 +108,21 @@
       </div>
       <div class="grid grid--three">
         <article class="card">
-          <div class="card__icon">
+          <div class="card__icon card__icon--blue">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
           </div>
           <h3>خبرة في نقاط البيع</h3>
           <p>حلول تربط المبيعات بالمخزون مباشرة مع دعم الباركود والطابعات الحرارية وسجلات الكاشير.</p>
         </article>
         <article class="card">
-          <div class="card__icon">
+          <div class="card__icon card__icon--brand">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
           </div>
           <h3>حسابات دقيقة</h3>
           <p>قيود يومية، تقارير أرباح وخسائر، ومراقبة المصروفات لتعرف وضعك المالي في أي لحظة.</p>
         </article>
         <article class="card">
-          <div class="card__icon">
+          <div class="card__icon card__icon--purple">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
           <h3>دعم وتشغيل سريع</h3>
@@ -137,7 +131,7 @@
       </div>
     </section>
 
-    <section class="panel" id="solutions">
+    <section class="panel panel--accent" id="solutions">
       <div class="panel__header">
         <p class="badge">الحلول</p>
         <h2>برامج جاهزة للتطبيق الفوري</h2>
@@ -145,7 +139,7 @@
       </div>
       <div class="grid grid--three">
         <article class="card card--project">
-          <div class="card__pill">نقاط البيع</div>
+          <div class="card__pill card__pill--purple">نقاط البيع</div>
           <h3>كاشير سريع</h3>
           <p>واجهة بيع سريعة مع خصومات وقسائم، ربط مباشر بالمخزون والتنبيهات عند انخفاض الكمية.</p>
           <a class="card__link" href="#contact">
@@ -154,7 +148,7 @@
           </a>
         </article>
         <article class="card card--project">
-          <div class="card__pill">الحسابات</div>
+          <div class="card__pill card__pill--brand">الحسابات</div>
           <h3>دفتر الأستاذ</h3>
           <p>دفتر يومية آلي، فواتير شراء وبيع، وتتبع المصروفات مع أرشفة مرفقات الفواتير.</p>
           <a class="card__link" href="#contact">
@@ -163,7 +157,7 @@
           </a>
         </article>
         <article class="card card--project">
-          <div class="card__pill">التقارير</div>
+          <div class="card__pill card__pill--blue">التقارير</div>
           <h3>لوحة قيادة</h3>
           <p>مؤشرات أرباح وخسائر، حركة عملاء ومورّدين، وتحليلات حسب الفرع أو البائع.</p>
           <a class="card__link" href="#contact">
@@ -174,7 +168,7 @@
       </div>
     </section>
 
-    <section class="panel panel--pricing" id="pricing">
+    <section class="panel" id="pricing">
       <div class="panel__header">
         <p class="badge">الأسعار</p>
         <h2>باقات تناسب كل الأحجام</h2>
@@ -197,7 +191,7 @@
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              إدارة مخزون básico
+              إدارة مخزون
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -247,7 +241,7 @@
               تدريب الفريق
             </li>
           </ul>
-          <a class="button" href="#contact">ابدأ الآن</a>
+          <a class="button button--brand" href="#contact">ابدأ الآن</a>
         </article>
 
         <article class="pricing-card">
@@ -290,7 +284,7 @@
       </div>
     </section>
 
-    <section class="panel panel--accent" id="industries">
+    <section class="panel panel--blue" id="industries">
       <div class="panel__header">
         <p class="badge">الأنشطة</p>
         <h2>مصمّم لقطاعات متنوعة</h2>
@@ -298,21 +292,21 @@
       </div>
       <div class="grid grid--three">
         <article class="card">
-          <div class="card__icon">
+          <div class="card__icon card__icon--blue">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           </div>
           <h3>محال التجزئة</h3>
           <p>تنظيم الأصناف، تتبع المرتجعات، وطباعة فواتير ضريبية بمقاسات متعددة.</p>
         </article>
         <article class="card">
-          <div class="card__icon">
+          <div class="card__icon card__icon--purple">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           </div>
           <h3>المطاعم والمقاهي</h3>
           <p>إدارة الطاولات، تقسيم الطلبات، وربط المطبخ وشاشات الإعداد بواجهة واحدة.</p>
         </article>
         <article class="card">
-          <div class="card__icon">
+          <div class="card__icon card__icon--brand">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
           <h3>العيادات والمراكز</h3>
@@ -321,7 +315,7 @@
       </div>
     </section>
 
-    <section class="panel panel--accent" id="contact">
+    <section class="panel panel--purple" id="contact">
       <div class="panel__header">
         <p class="badge">تواصل</p>
         <h2>لنطلق نظام المبيعات والحسابات لديك</h2>
@@ -354,7 +348,7 @@
           <label for="message">رسالتك</label>
           <textarea id="message" name="message" rows="4" placeholder="أخبرنا عن احتياجاتك..."></textarea>
         </div>
-        <button type="submit" class="button button--submit">إرسال الطلب</button>
+        <button type="submit" class="button button--purple button--submit">إرسال الطلب</button>
       </form>
 
       <div class="panel__cta">
@@ -362,7 +356,7 @@
           <h3>عرض التفعيل السريع</h3>
           <p class="muted">تنصيب النظام وربط الفروع خلال 48 ساعة مع متابعة شهرية.</p>
         </div>
-        <a class="button" href="https://api.whatsapp.com/send?phone=201208063327&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%8C%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%20NimaTech" target="_blank" rel="noopener noreferrer">تواصل واتساب</a>
+        <a class="button button--brand" href="https://api.whatsapp.com/send?phone=201208063327&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%8C%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%20NimaTech" target="_blank" rel="noopener noreferrer">تواصل واتساب</a>
       </div>
 
       <div class="contact-card">
