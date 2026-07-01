@@ -675,6 +675,440 @@ section,
   font-family: inherit;
 }
 
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(124, 108, 255, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(124, 108, 255, 0.6); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: var(--brand); }
+  51%, 100% { border-color: transparent; }
+}
+
+/* Base Animations */
+.hero {
+  animation: fadeUp 0.8s ease-out;
+}
+
+.hero__content {
+  animation: slideRight 0.8s ease-out 0.2s both;
+}
+
+.hero__card {
+  animation: slideLeft 0.8s ease-out 0.4s both;
+}
+
+.announcement {
+  animation: bounceIn 0.6s ease-out 0.1s both;
+}
+
+.announcement__badge {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.badge {
+  animation: scaleIn 0.5s ease-out 0.3s both;
+}
+
+/* Panel Animations */
+.panel {
+  animation: fadeUp 0.6s ease-out;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Card Animations */
+.card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(124, 108, 255, 0.4);
+  box-shadow: 0 16px 40px rgba(124, 108, 255, 0.15);
+}
+
+.card__icon {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover .card__icon {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(124, 108, 255, 0.2);
+}
+
+.card:hover .card__icon--purple {
+  background: rgba(168, 85, 247, 0.25);
+}
+
+.card:hover .card__icon--blue {
+  background: rgba(77, 166, 255, 0.25);
+}
+
+/* Button Animations */
+.button {
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.button:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.button--brand:hover {
+  box-shadow: 0 8px 25px rgba(124, 108, 255, 0.4);
+}
+
+.button--purple:hover {
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
+}
+
+.button--blue:hover {
+  box-shadow: 0 8px 25px rgba(77, 166, 255, 0.4);
+}
+
+/* Nav Animations */
+.nav a {
+  transition: color 0.2s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--brand);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.nav a:hover {
+  color: var(--brand);
+  transform: translateY(-2px);
+}
+
+/* Milestone Animations */
+.milestone {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.milestone:hover {
+  transform: translateX(-8px);
+  border-color: rgba(124, 108, 255, 0.3);
+}
+
+.milestone__step {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.milestone:hover .milestone__step {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(124, 108, 255, 0.3);
+}
+
+.milestone__step--purple {
+  animation: glow 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.milestone__step--brand {
+  animation: glow 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.milestone__step--blue {
+  animation: glow 3s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Pricing Animations */
+.pricing-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(124, 108, 255, 0.4);
+  box-shadow: 0 20px 50px rgba(124, 108, 255, 0.15);
+}
+
+.pricing-card--featured {
+  animation: glow 4s ease-in-out infinite;
+}
+
+.pricing-card__badge {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.pricing-card__amount {
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover .pricing-card__amount {
+  transform: scale(1.05);
+}
+
+/* Pill Animations */
+.pill {
+  transition: all 0.25s ease;
+}
+
+.pill:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 15px rgba(124, 108, 255, 0.2);
+}
+
+/* Card Link Animation */
+.card__link {
+  transition: all 0.25s ease;
+}
+
+.card__link:hover {
+  transform: translateX(-5px);
+}
+
+/* Hero Card List Animation */
+.hero__card li {
+  transition: all 0.25s ease;
+}
+
+.hero__card li:hover {
+  padding-left: 8px;
+  background: rgba(124, 108, 255, 0.05);
+  border-radius: 6px;
+}
+
+.hero__card li svg {
+  transition: transform 0.3s ease;
+}
+
+.hero__card li:hover svg {
+  transform: scale(1.2) rotate(10deg);
+  color: var(--purple);
+}
+
+/* Brand Animation */
+.brand {
+  transition: transform 0.3s ease;
+}
+
+.brand:hover {
+  transform: scale(1.05);
+}
+
+.brand-icon {
+  transition: transform 0.3s ease;
+}
+
+.brand:hover .brand-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Footer Animation */
+.footer {
+  transition: color 0.3s ease;
+}
+
+.footer:hover {
+  color: var(--text);
+}
+
+/* Contact Card Animation */
+.contact-card {
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+}
+
+.contact-link {
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.contact-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--brand);
+  transition: width 0.3s ease;
+}
+
+.contact-link:hover::after {
+  width: 100%;
+}
+
+/* Form Animations */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(124, 108, 255, 0.15);
+}
+
+/* CTA Animation */
+.panel__cta {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.panel__cta:hover {
+  transform: translateY(-4px);
+  border-color: rgba(124, 108, 255, 0.3);
+}
+
+/* Scroll Reveal Animation Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--left {
+  transform: translateX(-30px);
+}
+
+.reveal--left.active {
+  transform: translateX(0);
+}
+
+.reveal--right {
+  transform: translateX(30px);
+}
+
+.reveal--right.active {
+  transform: translateX(0);
+}
+
+.reveal--scale {
+  transform: scale(0.9);
+}
+
+.reveal--scale.active {
+  transform: scale(1);
+}
+
+/* Stagger Animation Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
 @media (max-width: 640px) {
   main {
     padding: 100px 16px 60px;
