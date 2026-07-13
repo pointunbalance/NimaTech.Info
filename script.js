@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Menu Toggle
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.querySelector('.nav');
+
+  if (mobileMenuToggle && nav) {
+    mobileMenuToggle.addEventListener('click', () => {
+      const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+      mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+      mobileMenuToggle.setAttribute('aria-label', isExpanded ? 'فتح القائمة' : 'إغلاق القائمة');
+      nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a nav link
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenuToggle.setAttribute('aria-label', 'فتح القائمة');
+        nav.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        mobileMenuToggle.setAttribute('aria-label', 'فتح القائمة');
+        nav.classList.remove('active');
+      }
+    });
+  }
+
   // Scroll Reveal
   const observerOptions = {
     threshold: 0.1,
@@ -74,9 +105,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Parallax effect on scroll
   window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero__card');
+    const hero = document.querySelector('.hero');
     if (hero) {
-      hero.style.transform = `translateY(${scrolled * 0.05}px)`;
+      const heroContent = hero.querySelector('.hero__content');
+      const heroCard = hero.querySelector('.hero__card');
+      
+      if (heroContent) {
+        heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+      }
+      if (heroCard) {
+        heroCard.style.transform = `translateY(${scrolled * 0.15}px)`;
+      }
     }
   });
 
